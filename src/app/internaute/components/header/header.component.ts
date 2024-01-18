@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { baseURL_FRONT_ADMIN } from 'src/app/core/config';
 
 @Component({
   selector: 'app-header',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent {
-
+LOGIN= baseURL_FRONT_ADMIN
 }
