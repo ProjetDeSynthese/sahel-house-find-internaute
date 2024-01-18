@@ -1,6 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Habitat } from 'src/app/interfaces/habitat';
+import { Quartier } from 'src/app/interfaces/quartier';
+import { TypeHabitat } from 'src/app/interfaces/type-habitat';
+import { QuartierService } from 'src/app/services/quartier.service';
+import { TypeHabitatService } from 'src/app/services/type-habitat.service';
 
 @Component({
   selector: 'app-property-detail',
@@ -9,6 +13,8 @@ import { Habitat } from 'src/app/interfaces/habitat';
 })
 export class PropertyDetailComponent implements OnInit {
   id!: string | null
+  allTypeHabitat!: TypeHabitat[];
+  allQuatier!: Quartier[];
 
   habitat: Habitat = {
     id: '1',
@@ -44,10 +50,29 @@ export class PropertyDetailComponent implements OnInit {
     }
   }
 
-  constructor(private route: ActivatedRoute) { }
+  constructor(private route: ActivatedRoute,private maisonService: TypeHabitatService,
+    private quartierService: QuartierService,) { }
 
   ngOnInit() {
     this.id = this.route.snapshot.paramMap.get('id');
-    console.log(this.id)
+  //  console.log(this.id)
+    this.onGetMaison();
+    this.onGetQuartier();
+  }
+
+  onGetQuartier() {
+    this.quartierService.findAll().subscribe({
+      next: res => {
+        this.allQuatier = res;
+      },
+    });
+  }
+
+  onGetMaison() {
+    this.maisonService.findAll().subscribe({
+      next: res => {
+        this.allTypeHabitat = res;
+      },
+    });
   }
 }

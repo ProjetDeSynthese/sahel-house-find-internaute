@@ -147,7 +147,6 @@
                     <!-- End video area  -->
 
 
-
                     <div class="section property-share">
                         <h4 class="s-property-title">Partagé </h4>
                         <div class="roperty-social">
@@ -203,35 +202,18 @@
                             <form action="" class=" form-inline">
                                 <fieldset>
                                     <div class="row">
-                                        <div class="col-xs-12">
-                                            <input type="text" class="form-control" placeholder="Mot clé">
-                                        </div>
-                                    </div>
-                                </fieldset>
-
-                                <fieldset>
-                                    <div class="row">
-                                        <div class="col-xs-6">
+                                        <div class="col-xs-5">
 
                                             <select id="lunchBegins" class="selectpicker" data-live-search="true"
-                                                data-live-search-style="begins" title="Select Your City">
-
-                                                <option>New york, CA</option>
-                                                <option>Paris</option>
-                                                <option>Casablanca</option>
-                                                <option>Tokyo</option>
-                                                <option>Marraekch</option>
-                                                <option>kyoto , shibua</option>
+                                                data-live-search-style="begins" title="Quartier">
+                                                <option *ngFor="let i of allQuatier" [value]="i.id">{{i.name}}</option>
                                             </select>
                                         </div>
-                                        <div class="col-xs-6">
-
-                                            <select id="basic" class="selectpicker show-tick form-control">
-                                                <option> -Status- </option>
-                                                <option>Rent </option>
-                                                <option>Boy</option>
-                                                <option>used</option>
-
+                                        <div class="col-xs-7">
+                                            <select id="" class="selectpicker" data-live-search="true"
+                                                data-live-search-style="begins" title="Maison">
+                                                <option *ngFor="let i of allTypeHabitat" [value]="i.id">{{i.name}}
+                                                </option>
                                             </select>
                                         </div>
                                     </div>
@@ -241,7 +223,7 @@
                                 <fieldset>
                                     <div class="row">
                                         <div class="col-xs-12">
-                                            <input class="button btn largesearch-btn" value="Search" type="submit">
+                                            <input routerLink="/maisons/" class="button btn largesearch-btn" value="Fitre" type="submit">
                                         </div>
                                     </div>
                                 </fieldset>
