@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { urlImages } from 'src/app/core/config';
 import { Habitat } from 'src/app/interfaces/habitat';
 import { HabitatService } from 'src/app/services/habitat.service';
 
@@ -10,7 +11,7 @@ import { HabitatService } from 'src/app/services/habitat.service';
 export class IndexComponent implements OnInit {
 
   allMaisons!: Habitat[] 
-
+  images = urlImages
   constructor(
     private maisonService: HabitatService,
   ) { }
@@ -22,6 +23,7 @@ export class IndexComponent implements OnInit {
   onGetMaison() {
     this.maisonService.findAll().subscribe({
       next: res => {
+        debugger
         this.allMaisons = res;
       },
     });

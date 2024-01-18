@@ -288,11 +288,11 @@
 
                 <div class="col-md-12 clear">
                     <div id="list-type" class="proerty-th">
-                        <div class="col-sm-6 col-md-4 p0" *ngFor="let item of allMaisons;">
+                        <div class="col-sm-6 col-md-4 p0" *ngFor="let item of allMaisons;let i=index">
                             <div class="box-two proerty-item">
                                 <div class="item-thumb">
                                     <a [routerLink]="['/maison/', item.id]">
-                                        <img [src]="item.image[0]"></a>
+                                        <img [src]="images[i+1]"></a>
                                 </div>
 
                                 <div class="item-entry overflow">

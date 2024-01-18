@@ -1,11 +1,23 @@
-// export const baseURL = 'http://localhost:8080';
-export const baseURL = 'http://192.168.43.171:8080';
-export const baseURL_FRONT_ADMIN = 'http://192.168.43.75:4200';
-
+export const baseURL = 'http://localhost:8080';
+//export const baseURL = 'http://192.168.43.171:8080';
+export const baseURL_FRONT_ADMIN = 'http://localhost:58206/';
+export const urlImages = [
+     'assets/images/1.jpg',
+     'assets/images/2.jpg',
+     'assets/images/3.jpg',
+     'assets/images/4.jpg',
+     'assets/images/5.jpeg',
+     'assets/images/6.jpeg',
+     'assets/images/7.jpeg',
+     'assets/images/8.jpeg',
+     'assets/images/9.jpeg',
+     'assets/images/10.jpeg',
+     'assets/images/11.jpeg',
+     'assets/images/12.jpeg',
+]
 
 
 export const apiURL = `${baseURL}/api/`;
-
 export const routesApi = {
 
      COMMUNE: {
@@ -41,6 +53,13 @@ export const routesApi = {
 
      }, 
 
+     HABITAT: {
+          FIND_ALL: apiURL + 'maison/',
+          SAVE: apiURL + 'maison/',
+          REMOVE: apiURL + 'maison/',
+          FIND_BY_ID: apiURL + 'maison/',
+          UPDATE: apiURL + 'maison/',
+     },
 
 
 
@@ -84,13 +103,6 @@ export const routesApi = {
           REMOVE: apiURL + 'citoyen/',
           FIND_BY_ID: apiURL + 'citoyen/',
           UPDATE: apiURL + 'citoyen/',
-     },
-     HABITAT: {
-          FIND_ALL: apiURL + 'habitat/',
-          SAVE: apiURL + 'habitat/',
-          REMOVE: apiURL + 'habitat/',
-          FIND_BY_ID: apiURL + 'habitat/',
-          UPDATE: apiURL + 'habitat/',
      },
      SECTEUR: {
           FIND_ALL: apiURL + 'secteur/',

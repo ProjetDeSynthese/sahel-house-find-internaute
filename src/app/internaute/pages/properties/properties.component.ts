@@ -5,6 +5,7 @@ import { Quartier } from 'src/app/interfaces/quartier';
 import { QuartierService } from 'src/app/services/quartier.service';
 import { Habitat } from 'src/app/interfaces/habitat';
 import { HabitatService } from 'src/app/services/habitat.service';
+import { urlImages } from 'src/app/core/config';
 
 @Component({
   selector: 'app-properties',
@@ -12,7 +13,7 @@ import { HabitatService } from 'src/app/services/habitat.service';
   styleUrls: ['./properties.component.scss']
 })
 export class PropertiesComponent implements OnInit {
-
+  images = urlImages
   form!: FormGroup;
   allTypeHabitat!: TypeHabitat[];
   allQuatier!: Quartier[];

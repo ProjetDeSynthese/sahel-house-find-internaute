@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+import { urlImages } from 'src/app/core/config';
 import { Habitat } from 'src/app/interfaces/habitat';
 import { Quartier } from 'src/app/interfaces/quartier';
 import { TypeHabitat } from 'src/app/interfaces/type-habitat';
@@ -12,6 +13,8 @@ import { TypeHabitatService } from 'src/app/services/type-habitat.service';
   styleUrls: ['./property-detail.component.scss']
 })
 export class PropertyDetailComponent implements OnInit {
+
+  images = urlImages
   id!: string | null
   allTypeHabitat!: TypeHabitat[];
   allQuatier!: Quartier[];
