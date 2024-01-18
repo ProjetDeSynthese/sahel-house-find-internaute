@@ -3,9 +3,9 @@
 <div class="slider-area">
     <div class="slider">
         <div id="bg-slider" class="owl-carousel owl-theme">
-            <div class="item"><img src="assets/templateClient/img/slide-2.jpg"></div>
-            <div class="item"><img src="assets/templateClient/img/slide-2.jpg" ></div>
-            <div class="item"><img src="assets/templateClient/img/slide1/slider-image-4.jpg" ></div>
+            <div class="item"><img src="assets/img/slide-2.jpg"></div>
+            <div class="item"><img src="assets/img/slide-2.jpg" ></div>
+            <div class="item"><img src="assets/img/slide1/slider-image-4.jpg" ></div>
         </div>
     </div>
     <div class="slider-content">
@@ -194,24 +194,27 @@
         <div class="row">
             <div class="col-md-10 col-md-offset-1 col-sm-12 text-center page-title">
                 <!-- /.feature title -->
-                <h2>Top submitted property</h2>
-                <p>Nulla quis dapibus nisl. Suspendisse ultricies commodo arcu nec pretium. Nullam sed arcu ultricies .
+                <h2>
+                    Biens immobilieres
+                </h2>
+                <p>
+                    Gérez les contrats de location, les paiements des locataires et visualisez le calendrier des événements liés aux locations.
                 </p>
             </div>
         </div>
 
         <div class="row">
             <div class="proerty-th">
-                <div class="col-sm-6 col-md-3 p0">
+                <div class="col-sm-6 col-md-3 p0" *ngFor="let item of allMaisons;">
                     <div class="box-two proerty-item">
                         <div class="item-thumb">
-                            <a href="property-1.html"><img src="assets/templateClient/img/demo/property-1.jpg"></a>
+                            <a   [routerLink]="['/maisons/', item.id]"><img [src]="item.image[0]"></a>
                         </div>
                         <div class="item-entry overflow">
-                            <h5><a href="property-1.html">Super nice villa </a></h5>
+                            <h5><a >{{item.typeMaison.name}} </a></h5>
                             <div class="dot-hr"></div>
-                            <span class="pull-left"><b>Area :</b> 120m </span>
-                            <span class="proerty-price pull-right">$ 300,000</span>
+                            <span class="pull-left"><b>Superficie :</b> {{ item.superficie}} m </span>
+                            <span class="proerty-price pull-right"> {{ item.superficie}} FCFA</span>
                         </div>
                     </div>
                 </div>
@@ -224,9 +227,9 @@
                             <i class="fa fa-th"></i>
                         </div>
                         <div class="more-entry overflow">
-                            <h5><a href="property-1.html">CAN'T DECIDE ? </a></h5>
-                            <h5 class="tree-sub-ttl">Show all properties</h5>
-                            <button class="btn border-btn more-black" value="All properties">All properties</button>
+                            <h5><a routerLink="/maisons/">NE PAS POUVOIR SE DÉCIDER ? </a></h5>
+                            <h5 class="tree-sub-ttl">Voir toutes les maisons</h5>
+                            <button class="btn border-btn more-black" routerLink="/maisons/">Maisons</button>
                         </div>
                     </div>
                 </div>
@@ -321,7 +324,7 @@
                                 <h4><strong>Ohidul Islam, </strong><i>Web Designer</i></h4>
                             </div>
                             <div class="client-face wow fadeInRight" data-wow-delay=".9s">
-                                <img src="assets/templateClient/img/client-face1.png" alt="">
+                                <img src="assets/img/client-face1.png" alt="">
                             </div>
                         </div>
                         <div class="item">
@@ -330,7 +333,7 @@
                                 <h4><strong>Ohidul Islam, </strong><i>Web Designer</i></h4>
                             </div>
                             <div class="client-face">
-                                <img src="assets/templateClient/img/client-face2.png" alt="">
+                                <img src="assets/img/client-face2.png" alt="">
                             </div>
                         </div>
                         <div class="item">
@@ -339,7 +342,7 @@
                                 <h4><strong>Ohidul Islam, </strong><i>Web Designer</i></h4>
                             </div>
                             <div class="client-face">
-                                <img src="assets/templateClient/img/client-face1.png" alt="">
+                                <img src="assets/img/client-face1.png" alt="">
                             </div>
                         </div>
                         <div class="item">
@@ -348,7 +351,7 @@
                                 <h4><strong>Ohidul Islam, </strong><i>Web Designer</i></h4>
                             </div>
                             <div class="client-face">
-                                <img src="assets/templateClient/img/client-face2.png" alt="">
+                                <img src="assets/img/client-face2.png" alt="">
                             </div>
                         </div>
                     </div>

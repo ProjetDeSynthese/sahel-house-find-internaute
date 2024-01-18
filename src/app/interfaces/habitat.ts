@@ -6,13 +6,13 @@ import { Proprietaire } from './proprietaire';
 export interface Habitat {
       id?: String,
       statut: String
-      chambre: String
+      chambre: Number
       douche: Number
       superficie: Number
       prix: String
       longitude: any
       latitude: any
-      parking: String
+      parking: Number
       description: String
       proprietaire: Proprietaire
       image: String[],
