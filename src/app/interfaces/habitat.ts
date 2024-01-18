@@ -13,7 +13,7 @@ export interface Habitat {
       longitude: any
       latitude: any
       parking: Number
-      description: String
+      description: any
       proprietaire: Proprietaire
       image: String[],
       video: String
